@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container {
+  display: inline-block;
+  position: relative;
+}
+div.content1{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: larger;
+  background-color: aquamarine;
+  padding: 60px;
+  border: 2px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+button{
+    margin: 10px;
+    padding: 20px;
+    background-color: beige;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+
+
+#button:focus + .content1,
+#button:hover + .content1 {
+  display: block;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="button">Click Me</button>
+        <div class="content1">
+        Home<br><br>About<br><br>Contact
+       </div>
+    </div>   
+</body>
+</html>
